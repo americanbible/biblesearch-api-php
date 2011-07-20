@@ -1,0 +1,29 @@
+h1. American Bible Society PHP wrapper for the Bible Search API
+
+The latest version of this library can always be found at https://github.com/americanbible/biblesearch-php-library.  
+
+This library is intended to ease your development with the BibleSearch API by providing php classes that do the direct interfacing with the API, which is xml based.  You are welcome to use the API directly, without these classes, but if your application is written in PHP you will probably save time by using these classes.
+
+The API provides access to much of the functionality of http://bibles.org, including search various Bible translations.  The benefit of using the API for your Bible access includes:
+
+# You don't have to have local storage of the text.  We do the storage for you.
+# You don't have to keep your local storage updated with the latest versions of the text.  Again, we do that for you.
+# We take care of managing copyright usage.  There's just one important rule for handling this, which is detailed in the section titled FUMS below.
+# Usage is free.  We don't charge for access to the data, or any updates.  ABS is a non-profit organization and we provide this as a service to the entire Christian community.
+
+h2. API Key
+
+To access the API, you must be a registered BibleSearch user and have activated your unique API token via the Signup Page at http://bibles.org/pages/api/signup. Once you have your API token, you can make calls to the API and retrieve content. Your API token is unique to you. It's a secret, so don't share it with anyone else or your access privileges may be revoked!
+
+h2. API Documentation
+
+You can find the Bible Search API documentation at http://bibles.org/pages/api/documentation.
+
+h2. FUMS
+
+The Fair Use Management System is how ABS provides this data for free, and yet respects all copyrights.  We have to provide usage data back to the copyright owners to make sure that the data is being used according to our agreements.  The way we do this is via an extremely light javascript tracking mechanism.  In order to use the API you must make sure and embed the FUMS javascript into your web page whenever the data pulled from the API is used.  You may cache the FUMS and data returned from an API call locally, but the FUMS needs to be on any web page where the cached data is used.
+
+If your application is not a web site, contact us for details on proper FUMS usage.
+
+For more information on how FUMS works please visit http://bibles.org/pages/api/documentation/fums.
+
