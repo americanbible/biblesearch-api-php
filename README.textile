@@ -1,4 +1,4 @@
-h1. American Bible Society PHP wrapper for the Bible Search API
+h1. xAmerican Bible Society PHP wrapper for the Bible Search API
 
 The latest version of this library can always be found at https://github.com/americanbible/biblesearch-php-library.  
 
