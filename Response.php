@@ -14,7 +14,7 @@
 /**
  *
  * This class is responsible for:
- * - Converting the XML string returned by a Phlickr_Request object into a
+ * - Converting the XML string returned by a Request object into a
  *   SimpleXML object.
  * - Determining the success or failure of the request.
  *

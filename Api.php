@@ -74,7 +74,6 @@ class ABS_Api {
      *
      * @return  string
      * @see     __construct()
-     * @uses    Phlickr_Api::$_key Value is loaded from this variable.
      */
     public function getKey() {
         return $this->_key;

@@ -22,7 +22,7 @@ class ABS_Request {
     const TIMEOUT_TOTAL = 50;
 
     /**
-     * Phlickr_API object
+     * API object
      *
      * @var object
      */
