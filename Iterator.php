@@ -17,7 +17,6 @@
  * @author  Brian Smith <wisecounselor@gmail.com>
  * @package ABS
  */
-require_once 'Exception.php';
 
 class ABS_Iterator implements Iterator {
     /**

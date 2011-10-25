@@ -34,8 +34,7 @@ class ABS_Api {
      * @var string
      * @see setEndpointUrl()
      */
-    const REST_ENDPOINT_URL = 'http://biblesearch.americanbible.org/';
-    //const REST_ENDPOINT_URL = 'http://v4.biblesearch.americanbible.org/';
+    const REST_ENDPOINT_URL = 'http://bibles.org/';
     /*
     * An American Bible Society API key.
     *

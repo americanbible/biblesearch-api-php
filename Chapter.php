@@ -4,14 +4,6 @@
  * @author  Brian Smith <wisecounselor@gmail.com>
  * @package ABS
  */
-    /*
-    * Include the ABS Api, core classes.
-    */
-    require_once 'Api.php';
-    /*
-    * Include the ABS Base object class, core classes.
-    */
-    require_once 'Base.php';
 
 class ABS_Chapter extends ABS_Base {
     
@@ -70,6 +62,37 @@ class ABS_Chapter extends ABS_Base {
                 throw new ABS_Exception('Invalid method ' . $method);
         }
     }
+    
+    /* 
+     * Use this if you have received a ChapterID from a previous api call to set the version, book and chapter.
+     */ 
+    public function setFromReceivedChapterID($ID) {
+    	if ( strpos( $ID, ':') !== false && strpos ( $ID, '.' ) !== false ) {
+    		$parts = explode(':', $ID);
+    		if ( count( $parts ) == 2 ) {
+    			$this->_version_id = $parts[0];
+    			$parts = explode('.', $parts[1]);
+	    		if ( count( $parts ) == 2 ) {
+	    			$this->_book_id = $parts[0];
+	    			$this->_chapter = 0 + $parts[1]; // Easy way to force this to be an int
+	    		}
+				elseif ( count ( $parts ) == 3 ) {
+					$this->_book_id = $parts[0].'.'.$parts[1];
+					$this->_chapter = 0 + $parts[2];
+				}
+	    		else {
+	    			throw new ABS_Exception( 'Invalid Chapter ID' . $ID );
+	    		}
+    		}
+    		else {
+    			throw new ABS_Exception( 'Invalid Chapter ID' . $ID );
+    		}
+    	}
+    	else {
+    		throw new ABS_Exception( 'Invalid Chapter ID' . $ID );
+    	}
+    }
+    
     /*
      * Method to list all verses of a chapter of the Bible
      * 

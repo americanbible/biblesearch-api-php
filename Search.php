@@ -4,15 +4,6 @@
  * @author  Mark Bradshaw <mbradshaw@americanbible.org>
  * @package ABS
  */
- 
-/*
-* Include the ABS Api, core classes.
-*/
-require_once 'Api.php';
-/*
-* Include the ABS Base object class, core classes.
-*/
-require_once 'Base.php';
 
 class ABS_Search extends ABS_Base {
 

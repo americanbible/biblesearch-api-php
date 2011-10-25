@@ -4,14 +4,6 @@
  * @author  Brian Smith <wisecounselor@gmail.com>, Mark Bradshaw <mbradshaw@americanbible.org>
  * @package ABS
  */
-    /*
-    * Include the ABS Api, core classes.
-    */
-    require_once 'Api.php';
-    /*
-    * Include the ABS Base object class, core classes.
-    */
-    require_once 'Base.php';
 
 class ABS_Verse extends ABS_Base {
     
@@ -46,7 +38,7 @@ class ABS_Verse extends ABS_Base {
     protected function getUrl($method) {
         switch($method) {
             case 'passages':
-                return 'passages.xml?q[]=';
+                return 'passages.xml?';
             case 'list':
                 return implode('',array('chapters/',
                                         $this->__buildChapterID(),
@@ -224,7 +216,7 @@ class ABS_Verse extends ABS_Base {
         if (empty($this->_version_id) || is_null($this->_version_id)) {
             throw new ABS_Exception('The Version cannot be null or empty');
         }
-        $this->addParam('passage',$passage);
+        $this->addParam('q[]',$passage);
         $this->addParam('version',$this->_version_id);
         return $this->requestXml('passages');
     }

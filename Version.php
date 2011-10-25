@@ -4,14 +4,6 @@
  * @author  Brian Smith <wisecounselor@gmail.com>
  * @package ABS
  */
-    /*
-    * Include the ABS Api, core classes.
-    */
-    require_once 'Api.php';
-    /*
-    * Include the ABS Base object class, core classes.
-    */
-    require_once 'Base.php';
 
 class ABS_Version extends ABS_Base {
     

@@ -41,6 +41,7 @@ class ABS_Response {
      */
     function __construct($restResult, $throwOnFailed = false) {
         $restResult = trim($restResult);
+        //print "Response.php result: " . $restResult;
         if ($restResult != '<?xml version="1.0" encoding="utf-8" ?>') {
             $xml = simplexml_load_string($restResult);
             if (false === $xml ) {

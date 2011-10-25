@@ -67,6 +67,8 @@ class ABS_Request {
      */
     public function __construct(ABS_Api $api, $url, $params = array())
     {
+        //print "Request.php __construct" . $url;
+        //print_r($params);
         $this->_api = $api;
         if (!is_null($params)) {
             $this->_params = $params;
@@ -93,6 +95,7 @@ class ABS_Request {
      */
     static function submitRequest($key, $url, $throwOnFail = true)
     {
+        //print "Request.php url: " . $url;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_FAILONERROR, 1);
