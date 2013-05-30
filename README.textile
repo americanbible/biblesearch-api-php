@@ -1,6 +1,6 @@
 h1. American Bible Society PHP wrapper for the Bible Search API
 
-The latest version of this library can always be found at https://github.com/americanbible/biblesearch-php-library.  
+The latest version of this library can always be found at https://github.com/americanbible/biblesearch-api-php.  
 
 This library is intended to ease your development with the BibleSearch API by providing php classes that do the direct interfacing with the API, which is xml based.  You are welcome to use the API directly, without these classes, but if your application is written in PHP you will probably save time by using these classes.
 
